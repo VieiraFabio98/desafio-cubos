@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@layer base {
+  button:not([disabled]),
+  [role="button"]:not([disabled]) {
+    cursor: pointer;
+  }
+}
+
+:root {
+  --background: rgb(248, 246, 250);
+  --foreground: rgb(141, 0, 241);
+
+  --button: #5c04a8;
+  --button-hover: #7A00E0;
+  --button-text: #ffffff;
+
+  --card-background: rgba(35, 34, 37, 1);
+}
+
+.dark {
+  --background: rgb(48, 45, 51);
+  --foreground: rgba(238, 238, 240, 1);
+
+  --button: #8835d1;
+  --button-hover: #9354ca;
+  --button-text: #ffffff;
+
+  --card-background: rgba(35, 34, 37, 1);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: rgba(18, 17, 19, 1);
+    --foreground: rgba(238, 238, 240, 1);
+
+    --button: #801dd6;
+    --button-hover: #d5bbeb;
+    --button-text: #ffffff;
+  }
+} */
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+ 
+}
